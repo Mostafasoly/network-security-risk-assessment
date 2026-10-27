@@ -1,0 +1,31 @@
+# 🛡️ Network Security Risk Assessment & Hardening Strategy
+
+## Executive Summary
+This project outlines a security risk assessment conducted for a social media organization that recently experienced a major data breach. Following an inspection of the internal network infrastructure, four critical vulnerabilities were identified. This report documents the analysis and proposes a comprehensive network hardening strategy to mitigate future risks.
+
+---
+
+## 🔍 Identified Vulnerabilities & Risk Analysis
+1. **Employee Password Sharing:** Personnel share credentials, increasing the blast radius of a potential compromise.
+2. **Default Database Admin Password:** The primary database administrative account was left set to vendor default credentials.
+3. **Missing Firewall Traffic Rules:** Inbound and outbound network traffic is unfiltered, exposing the network to unauthorized access.
+4. **Lack of Multi-Factor Authentication (MFA):** Systems rely solely on single-factor authentication (passwords), making them vulnerable to credential stuffing and brute-force attacks.
+
+---
+
+## 🛠️ Network Hardening Recommendations (Part 1 & 2)
+
+### 1. Password Policies & Credential Management
+* **Implementation:** Establish strict password policies emphasizing secure hashing/salting backend storage and eliminating default credentials.
+* **Effectiveness:** Prevents attackers from easily cracking credentials via brute-force scripts or dictionary attacks, and removes default admin entry points.
+
+### 2. Firewall Maintenance & Port Security
+* **Implementation:** 
+  * **Disabling Unused Ports:** Shut down inactive network pathways to shrink the attack surface.
+  * **Port Filtering:** Inspect and restrict traffic passing through specific ports using strict rules.
+  * **Firewall Maintenance:** Routinely review and update rule sets to block abnormal traffic and mitigate threats like DDoS attacks.
+* **Effectiveness:** Acts as a network gatekeeper to block unauthorized access and control lateral movement.
+
+### 3. Multi-Factor Authentication (MFA)
+* **Implementation:** Enforce MFA across all administrative and user panels.
+* **Effectiveness:** Neutralizes password-only compromises. Even if an attacker obtains a user's password, access is blocked without the secondary verification token.
